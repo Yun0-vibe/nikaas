@@ -307,7 +307,7 @@ export function ConsoleDemo() {
           <SectionHead
             eyebrow="01 · The console"
             title="A vent, not a clutter drawer."
-            lede="Every surface has a job. Chambers hold the worlds. The Exhaust holds the truth. Release is the only button that matters."
+            lede="Every surface has a job in a modded Minecraft setup. Chambers hold the worlds. The Exhaust holds the truth. Release is the only button that matters."
           />
           <Reveal delay={0.1}>
             <p className="flex items-center gap-2 border border-line bg-white/[0.03] px-3 py-2 font-mono text-[9.5px] tracking-[0.16em] text-steel uppercase">

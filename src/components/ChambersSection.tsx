@@ -69,8 +69,8 @@ export function ChambersSection() {
         <div>
           <SectionHead
             eyebrow="04 · Chambers"
-            title="Three worlds. Zero cross-talk."
-            lede="A chamber is a world with its own mods, saves and settings. Keep a heavy 412-mod tech pack next to a clean vanilla world and never untangle a folder again."
+            title="Three Minecraft worlds. Zero cross-talk."
+            lede="A chamber is a Minecraft world with its own mods, saves and settings. Keep a heavy 412-mod tech pack next to a clean vanilla world and never untangle a folder again."
           />
 
           <ul className="mt-7 space-y-px overflow-hidden border border-line bg-line">

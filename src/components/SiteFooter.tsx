@@ -33,15 +33,15 @@ export function SiteFooter() {
                 <span className="block font-display text-[15px] font-bold tracking-[0.2em] text-bone">
                   NIKAAS
                 </span>
-                <span className="mt-1 block font-mono text-[8.5px] tracking-[0.34em] text-steel">
-                  LAUNCHER
+                <span className="mt-1 block font-pixel text-[7.5px] tracking-[0.16em] text-grass/90">
+                  MC LAUNCHER
                 </span>
               </span>
             </a>
-            <p className="mt-3 max-w-[240px] text-[12px] leading-relaxed text-steel">
-              Heavy modpacks. Clean pressure.
+            <p className="mt-3 max-w-[260px] text-[12px] leading-relaxed text-steel">
+              A third-party Minecraft: Java Edition launcher for Windows.
               <br />
-              Dark by default, hot under load.
+              Heavy modpacks. Clean pressure.
             </p>
             <div className="mt-4 flex flex-wrap gap-1.5">
               <span className="pill">v1.0.0</span>
@@ -93,7 +93,7 @@ export function SiteFooter() {
               <li>Windows 10 / 11 · 64-bit</li>
               <li>Signed installer at release</li>
               <li>Microsoft + offline accounts</li>
-              <li>Minecraft required</li>
+              <li>Minecraft: Java Edition required</li>
             </ul>
             <nav aria-label="Support" className="mt-4">
               <ul className="flex flex-wrap gap-x-4 gap-y-2">

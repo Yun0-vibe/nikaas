@@ -20,6 +20,10 @@
   --color-ember: #ff3b1f;
   --color-coolant: #35e0f0;
   --color-acid: #79e0a5;
+  --color-grass: #7cc355;
+  --color-diamond: #4aedd9;
+  --color-dirt: #8b5a35;
+  --color-stone: #9aa0a8;
 
   --radius-forge: 5px;
 
@@ -31,6 +35,7 @@
   --font-display: var(--font-grotesk), "Segoe UI", system-ui, sans-serif;
   --font-body: var(--font-inter), "Segoe UI", system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), "Cascadia Code", Consolas, monospace;
+  --font-pixel: var(--font-silkscreen), "Cascadia Code", monospace;
 }
 
 :root {
@@ -291,12 +296,19 @@
     display: inline-flex;
     align-items: center;
     gap: 9px;
-    font-family: var(--font-mono);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
+    font-family: var(--font-pixel);
+    font-size: 10.5px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--color-volt);
+  }
+
+  .pixel-grid {
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 24px 24px;
   }
 
   .kicker {

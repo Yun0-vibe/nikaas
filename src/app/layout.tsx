@@ -29,41 +29,77 @@ const jetbrains = localFont({
   display: "swap",
 });
 
+const silkscreen = localFont({
+  src: [
+    {
+      path: "../../public/fonts/silkscreen-400.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/silkscreen-700.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-silkscreen",
+  display: "swap",
+});
+
+const SITE_TITLE = "Nikaas — Minecraft Java Edition Launcher for Windows";
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE.name} — ${SITE.tagline}`,
+    default: SITE_TITLE,
     template: `%s · ${SITE.name}`,
   },
   description: SITE.description,
   applicationName: SITE.name,
   keywords: [
     "Minecraft launcher",
-    "modpack launcher",
-    "Windows",
-    "Fabric",
-    "Forge",
-    "NeoForge",
-    "Modrinth",
+    "Minecraft Java Edition launcher",
+    "Minecraft launcher for Windows",
+    "Minecraft modpack launcher",
+    "third-party Minecraft launcher",
+    "Fabric launcher",
+    "Forge launcher",
+    "NeoForge launcher",
+    "Modrinth launcher",
+    "mod manager",
+    "Minecraft 1.21 launcher",
     "Nikaas",
   ],
   authors: [{ name: SITE.name }],
+  creator: SITE.name,
+  publisher: SITE.name,
+  category: "games",
+  classification: "Minecraft launcher",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: SITE.name,
-    title: `${SITE.name} — ${SITE.tagline}`,
+    title: SITE_TITLE,
     description: SITE.description,
     url: "/",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.name} — ${SITE.tagline}`,
+    title: SITE_TITLE,
     description: SITE.description,
   },
-  robots: { index: true, follow: true },
-  category: "technology",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export const viewport: Viewport = {
@@ -79,7 +115,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${grotesk.variable} ${inter.variable} ${jetbrains.variable}`}
+      className={`${grotesk.variable} ${inter.variable} ${jetbrains.variable} ${silkscreen.variable}`}
     >
       <body className="relative min-h-screen antialiased">
         <a

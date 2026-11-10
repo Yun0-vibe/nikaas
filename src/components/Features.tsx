@@ -20,8 +20,8 @@ export function Features() {
       <div className="container-forge">
         <SectionHead
           eyebrow="02 · The system"
-          title="Six parts. One pressure line."
-          lede="A small set of nouns, repeated everywhere. Learn them once and the whole launcher reads like an engine diagram."
+          title="Six parts every modded setup needs."
+          lede="A small set of nouns, repeated everywhere. Learn them once and every Minecraft: Java Edition world gets its own clean pressure line."
         />
 
         <div className="mt-9 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

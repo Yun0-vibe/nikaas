@@ -13,6 +13,6 @@ export const SITE = {
   short: "NIKAAS",
   tagline: "Heavy modpacks. Clean pressure.",
   description:
-    "Nikaas is a Windows launcher for heavy Minecraft modpacks. Isolated chambers, a live exhaust, one Release button.",
+    "Nikaas is a Minecraft: Java Edition launcher for Windows. Play heavy modpacks in isolated chambers, install Fabric, Forge or NeoForge, browse Modrinth mods, and launch with one Release button.",
   version: "v1.0.0",
 } as const;

@@ -69,14 +69,15 @@ export function DownloadSection() {
                   08 · Release status
                 </p>
                 <h2 className="mt-3 text-[clamp(28px,4.6vw,46px)] text-bone">
-                  One .exe.
+                  One Minecraft launcher.
                   <br />
                   <span className="text-volt">No setup rituals.</span>
                 </h2>
                 <p className="lede mt-4 max-w-lg">
                   Nikaas isn&apos;t public yet. When the first stable build is
-                  ready, this page will host the signed Windows installer —
-                  download it, run it, pick a chamber, hit Release.
+                  ready, this page will host the signed Windows installer for
+                  Minecraft: Java Edition — download it, run it, pick a chamber,
+                  hit Release.
                 </p>
 
                 <ul className="mt-6 grid gap-2 sm:grid-cols-2">

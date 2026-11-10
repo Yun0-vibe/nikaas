@@ -80,7 +80,7 @@ export function SiteHeader() {
         <a
           href="#top"
           className="group flex items-center gap-2.5"
-          aria-label="Nikaas Launcher — home"
+          aria-label="Nikaas Launcher — Minecraft Java Edition launcher home"
           onClick={() => setOpen(false)}
         >
           <span className="relative">
@@ -98,8 +98,8 @@ export function SiteHeader() {
             <span className="block font-display text-[15px] font-bold tracking-[0.2em] text-bone">
               NIKAAS
             </span>
-            <span className="mt-1 block font-mono text-[8.5px] tracking-[0.34em] text-steel">
-              LAUNCHER
+            <span className="mt-1 block font-pixel text-[7.5px] tracking-[0.16em] text-grass/90">
+              MC LAUNCHER
             </span>
           </span>
         </a>

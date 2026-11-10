@@ -68,3 +68,14 @@ preview URLs automatically.
   persisted or sent anywhere.
 - Motion respects `prefers-reduced-motion`; the ember canvas and parallax fall
   back to static rendering.
+- Nikaas is an independent third-party launcher. Minecraft is a trademark of
+  Mojang AB; the site uses nominative text references and original voxel art
+  only — no Mojang assets or logos.
+
+## Credits
+
+- [Silkscreen](https://github.com/googlefonts/silkscreen) pixel font by Jason
+  Kottke, licensed under the SIL Open Font License 1.1
+  (`public/fonts/Silkscreen-OFL.txt`).
+- Space Grotesk, Inter and JetBrains Mono are bundled locally under their
+  respective open font licenses.

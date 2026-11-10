@@ -51,8 +51,8 @@ export function CompareSection() {
       <div className="container-forge">
         <SectionHead
           eyebrow="07 · Compare"
-          title="What a launcher should handle."
-          lede="The stock launcher starts the game. Nikaas also isolates worlds, manages loaders, runs the catalog and shows you what is happening. Here is the difference in plain terms."
+          title="What a Minecraft launcher should handle."
+          lede="The stock Minecraft launcher starts the game. Nikaas also isolates worlds, manages loaders, runs the catalog and shows you what is happening. Here is the difference in plain terms."
         />
 
         <Reveal delay={0.08}>

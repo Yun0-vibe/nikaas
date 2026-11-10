@@ -52,8 +52,8 @@ export function CatalogShowcase() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHead
             eyebrow="03 · Catalog"
-            title="Mods in one click, matched to the chamber."
-            lede="Search Modrinth for mods, shaders and resource packs. Every result is checked against the chamber's game version and loader, and required dependencies install with it."
+            title="Minecraft mods in one click, matched to the chamber."
+            lede="Search Modrinth for mods, shaders and resource packs. Every result is checked against the chamber's Minecraft version and loader, and required dependencies install with it."
           />
           <Reveal delay={0.1}>
             <a href="#anatomy" className="btn btn-ghost btn-sm">

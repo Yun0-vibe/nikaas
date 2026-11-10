@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "motion/react";
 import type { ReactNode } from "react";
+import { VoxelBlock } from "@/components/ui/VoxelBlock";
 
 export function Reveal({
   children,
@@ -55,7 +56,7 @@ export function SectionHead({
       }
     >
       <p className="eyebrow">
-        <span className="h-px w-7 bg-gradient-to-r from-magma to-transparent" />
+        <VoxelBlock kind="grass" className="w-3.5 shrink-0" />
         {eyebrow}
       </p>
       <h2 className="mt-4 text-[clamp(28px,4.4vw,46px)] text-bone">{title}</h2>

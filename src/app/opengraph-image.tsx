@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
-import { SITE } from "@/lib/site";
 
-export const alt = `${SITE.name} — ${SITE.tagline}`;
+export const alt =
+  "Nikaas — Minecraft Java Edition launcher for Windows with isolated modpack chambers";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -65,7 +65,7 @@ export default function OpengraphImage() {
                 marginTop: 4,
               }}
             >
-              LAUNCHER
+              MC LAUNCHER
             </span>
           </div>
           <div
@@ -90,7 +90,7 @@ export default function OpengraphImage() {
                 display: "flex",
               }}
             />
-            WINDOWS · COMING SOON
+            MINECRAFT: JAVA EDITION
           </div>
         </div>
 
@@ -105,8 +105,8 @@ export default function OpengraphImage() {
               flexDirection: "column",
             }}
           >
-            <span>Heavy modpacks.</span>
-            <span style={{ color: "#FF6A00" }}>Clean pressure.</span>
+            <span>Minecraft launcher.</span>
+            <span style={{ color: "#7CC355" }}>Clean pressure.</span>
           </div>
           <div
             style={{
@@ -126,7 +126,7 @@ export default function OpengraphImage() {
               maxWidth: 820,
             }}
           >
-            Isolated chambers · live exhaust · one Release button
+            A Windows launcher for heavy modpacks · isolated chambers · one Release
           </div>
         </div>
 
@@ -139,7 +139,7 @@ export default function OpengraphImage() {
             color: "#98A1AE",
           }}
         >
-          <span>VANILLA</span>
+          <span style={{ color: "#7CC355" }}>JAVA EDITION</span>
           <span>FABRIC</span>
           <span>FORGE</span>
           <span>NEOFORGE</span>

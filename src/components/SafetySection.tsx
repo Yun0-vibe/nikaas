@@ -41,7 +41,7 @@ export function SafetySection() {
         <SectionHead
           eyebrow="06 · Safety"
           title="Nothing leaves the vent."
-          lede="A launcher needs your files and a session token. It should not need your password, your admin rights, or a copy of your world. Here is exactly what Nikaas touches."
+          lede="A Minecraft launcher needs your game files and a session token. It should not need your password, your admin rights, or a copy of your world. Here is exactly what Nikaas touches."
         />
 
         <div className="mt-9 grid gap-4 lg:grid-cols-[1.05fr_0.95fr]">

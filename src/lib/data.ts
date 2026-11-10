@@ -7,6 +7,7 @@ export const NAV_SECTIONS = [
 ] as const;
 
 export const MARQUEE_ITEMS = [
+  "Minecraft: Java Edition",
   "Vanilla",
   "Fabric",
   "Forge",
@@ -16,6 +17,8 @@ export const MARQUEE_ITEMS = [
   "Offline profiles",
   "Isolated worlds",
 ] as const;
+
+export const MC_ITEM = "Minecraft: Java Edition";
 
 export type FeatureIcon =
   | "chamber"
@@ -119,6 +122,10 @@ export const LANGUAGE_ROWS = [
 
 export const FAQ = [
   {
+    q: "What is Nikaas?",
+    a: "Nikaas is a third-party Minecraft: Java Edition launcher for Windows. It keeps every modpack in its own chamber, installs Fabric, Forge or NeoForge, and launches the game with one Release button.",
+  },
+  {
     q: "When can I download Nikaas?",
     a: "Not yet. The first stable build is still being finished. The signed .exe will be posted in the download section when it's ready.",
   },
@@ -149,6 +156,10 @@ export const FAQ = [
   {
     q: "What are the system requirements?",
     a: "Windows 10 or 11 (64-bit) and an internet connection for installs. Keep enough free disk space for your modpacks; Nikaas picks a drive with room instead of assuming C:.",
+  },
+  {
+    q: "Is Nikaas an official Minecraft launcher?",
+    a: "No. Nikaas is an independent, third-party launcher for Minecraft: Java Edition. It is not affiliated with or endorsed by Mojang Studios or Microsoft. A valid Minecraft account is still required to play.",
   },
 ] as const;
 
