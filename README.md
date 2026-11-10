@@ -16,7 +16,6 @@ Router), React, TypeScript, Tailwind CSS v4 and Motion.
 Node.js 20.9+ is required.
 
 ```bash
-cd web
 npm install
 npm run dev        # http://localhost:3000
 ```
@@ -32,7 +31,6 @@ npm run build      # production build
 ## Project layout
 
 ```
-web/
 ├── src/app/               layout, page, global styles, metadata routes
 │   ├── globals.css        forge design tokens + component classes
 │   ├── opengraph-image.tsx  1200×630 social card (generated)
@@ -46,19 +44,21 @@ web/
 
 ## Deploy to Vercel
 
-1. Push this repository to GitHub (or run `vercel` in `web/`).
-2. Import the repo at [vercel.com/new](https://vercel.com/new).
-3. Set **Root Directory** to `web`. The framework is detected as Next.js; leave
-   the build command (`next build`) and output defaults untouched.
-4. Optional environment variable:
+The repository is the app itself, so Vercel needs no configuration.
+
+1. Import [Yun0-vibe/nikaas](https://github.com/Yun0-vibe/nikaas) at
+   [vercel.com/new](https://vercel.com/new), or open the
+   [one-click import](https://vercel.com/new/clone?repository-url=https://github.com/Yun0-vibe/nikaas).
+2. Leave every build setting at its default — Next.js is detected automatically.
+3. Optional environment variable:
    - `NEXT_PUBLIC_SITE_URL` — canonical site URL, e.g. `https://nikaas.example`.
      When unset, the app derives the URL from
      `VERCEL_PROJECT_PRODUCTION_URL` / `VERCEL_URL`, so previews work without
      configuration.
-5. Deploy. No server, database or third-party keys are needed.
+4. Deploy. No server, database or third-party keys are needed.
 
-The existing static site in `../docs` is unrelated and can stay as-is; deploy only
-the `web` directory.
+Every push to `main` then triggers a production deployment; pull requests get
+preview URLs automatically.
 
 ## Notes
 
