@@ -1,29 +1,37 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import { ForgeMark } from "@/components/ui/ForgeMark";
 import { Icon } from "@/components/console/Icon";
 
 const EXPLORE = [
+  { label: "Screens", href: "#tour" },
   { label: "The console", href: "#anatomy" },
-  { label: "Features", href: "#features" },
-  { label: "Catalog", href: "#catalog" },
-  { label: "Chambers", href: "#chambers" },
+  { label: "Store preview", href: "#store" },
+  { label: "Update log", href: "/news" },
 ];
 
 const PRODUCT = [
+  { label: "Features", href: "#features" },
+  { label: "Chambers", href: "#chambers" },
   { label: "Design language", href: "#design" },
-  { label: "Safety", href: "#safety" },
-  { label: "Compare launchers", href: "#compare" },
   { label: "Download", href: "#download" },
 ];
 
 const SUPPORT = [
   { label: "FAQ", href: "#faq" },
+  { label: "Compare launchers", href: "#compare" },
   { label: "System requirements", href: "#download" },
-  { label: "Release status", href: "#download" },
 ];
 
 export function SiteFooter() {
+  const pathname = usePathname();
+  const offHome = pathname !== "/";
+  const toHref = (href: string) =>
+    offHome && href.startsWith("#") ? `/${href}` : href;
+
   return (
-    <footer className="relative mt-8 border-t border-line bg-[#05060a]/70">
+    <footer className="relative mt-8 border-t border-line bg-[#050a08]/70">
       <div className="container-forge py-12">
         <div className="grid gap-9 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.1fr]">
           <div>
@@ -57,7 +65,7 @@ export function SiteFooter() {
               {EXPLORE.map((link) => (
                 <li key={link.label}>
                   <a
-                    href={link.href}
+                    href={toHref(link.href)}
                     className="text-[12.5px] text-[#b6bdc8] transition-colors hover:text-volt"
                   >
                     {link.label}
@@ -75,7 +83,7 @@ export function SiteFooter() {
               {PRODUCT.map((link) => (
                 <li key={link.label}>
                   <a
-                    href={link.href}
+                    href={toHref(link.href)}
                     className="text-[12.5px] text-[#b6bdc8] transition-colors hover:text-volt"
                   >
                     {link.label}
@@ -100,7 +108,7 @@ export function SiteFooter() {
                 {SUPPORT.map((link) => (
                   <li key={link.label}>
                     <a
-                      href={link.href}
+                      href={toHref(link.href)}
                       className="font-mono text-[10px] text-steel transition-colors hover:text-volt"
                     >
                       {link.label}

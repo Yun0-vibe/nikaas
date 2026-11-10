@@ -7,12 +7,12 @@ import { cn } from "@/lib/utils";
 import { Icon } from "./Icon";
 
 const KIND: Record<LogKind, { color: string; glyph: string }> = {
-  info: { color: "#98A1AE", glyph: "·" },
-  ok: { color: "#79E0A5", glyph: "✓" },
-  warn: { color: "#FFB020", glyph: "!" },
-  error: { color: "#FF3B1F", glyph: "×" },
-  system: { color: "#35E0F0", glyph: "»" },
-  live: { color: "#FFE7A3", glyph: "▸" },
+  info: { color: "#93A79A", glyph: "·" },
+  ok: { color: "#86E85A", glyph: "✓" },
+  warn: { color: "#FFC94A", glyph: "!" },
+  error: { color: "#FF5C3D", glyph: "×" },
+  system: { color: "#45E3CF", glyph: "»" },
+  live: { color: "#F3FFE8", glyph: "▸" },
 };
 
 export function ExhaustLog({ launcher }: { launcher: Launcher }) {
@@ -47,7 +47,7 @@ export function ExhaustLog({ launcher }: { launcher: Launcher }) {
           >
             <span
               className={cn("dot", phase !== "idle" && "animate-pulse")}
-              style={{ color: phase === "idle" ? "#4C5563" : "#79E0A5" }}
+              style={{ color: phase === "idle" ? "#4C5563" : "#86E85A" }}
             />
             {phase === "idle" ? "idle" : "live"}
           </span>

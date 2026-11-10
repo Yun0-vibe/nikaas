@@ -1,8 +1,8 @@
 import { Hero } from "@/components/Hero";
-import { LoaderMarquee } from "@/components/LoaderMarquee";
+import { ProductTour } from "@/components/ProductTour";
 import { ConsoleDemo } from "@/components/console/ConsoleDemo";
 import { Features } from "@/components/Features";
-import { CatalogShowcase } from "@/components/CatalogShowcase";
+import { StorePreview } from "@/components/StorePreview";
 import { ChambersSection } from "@/components/ChambersSection";
 import { DesignSection } from "@/components/DesignSection";
 import { SafetySection } from "@/components/SafetySection";
@@ -55,6 +55,7 @@ const structuredData = {
         "Isolated per-world chamber folders",
         "Vanilla, Fabric, Forge and NeoForge loaders",
         "Built-in Modrinth mod catalog",
+        "Browsable store preview with wishlists",
         "Microsoft device-code sign-in and offline profiles",
         "Live install and launch log",
         "Minecraft: Java Edition launcher for Windows",
@@ -81,10 +82,10 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <Hero />
-      <LoaderMarquee />
+      <ProductTour />
       <ConsoleDemo />
       <Features />
-      <CatalogShowcase />
+      <StorePreview />
       <ChambersSection />
       <DesignSection />
       <SafetySection />

@@ -29,10 +29,10 @@ const ToastContext = createContext<{
 } | null>(null);
 
 const TONE: Record<ToastTone, { color: string; glyph: string }> = {
-  ok: { color: "#79E0A5", glyph: "✓" },
-  info: { color: "#35E0F0", glyph: "i" },
-  warn: { color: "#FFB020", glyph: "!" },
-  danger: { color: "#FF3B1F", glyph: "×" },
+  ok: { color: "#86E85A", glyph: "✓" },
+  info: { color: "#45E3CF", glyph: "i" },
+  warn: { color: "#FFC94A", glyph: "!" },
+  danger: { color: "#FF5C3D", glyph: "×" },
 };
 
 export function ToastProvider({ children }: { children: ReactNode }) {

@@ -19,7 +19,7 @@ export function Features() {
     <section id="features" className="relative py-20 sm:py-28">
       <div className="container-forge">
         <SectionHead
-          eyebrow="02 · The system"
+          eyebrow="03 · The system"
           title="Six parts every modded setup needs."
           lede="A small set of nouns, repeated everywhere. Learn them once and every Minecraft: Java Edition world gets its own clean pressure line."
         />

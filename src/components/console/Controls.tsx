@@ -75,9 +75,9 @@ export function Switch({
           transition={{ type: "spring", stiffness: 520, damping: 32 }}
           style={{
             background: checked
-              ? "linear-gradient(180deg,#FFE7A3,#FF6A00)"
+              ? "linear-gradient(180deg,#F3FFE8,#5FCF4A)"
               : "#4C5563",
-            boxShadow: checked ? "0 0 12px rgba(255,106,0,.85)" : "none",
+            boxShadow: checked ? "0 0 12px rgba(95,207,74,.85)" : "none",
             borderRadius: 1,
           }}
         />

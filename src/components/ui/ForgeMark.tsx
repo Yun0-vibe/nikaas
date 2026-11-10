@@ -43,9 +43,9 @@ export function ForgeMark({
           y2="45"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stopColor="#FFE7A3" />
-          <stop offset=".45" stopColor="#FF9A2E" />
-          <stop offset="1" stopColor="#FF4D00" />
+          <stop offset="0" stopColor="#F3FFE8" />
+          <stop offset=".45" stopColor="#8BE86A" />
+          <stop offset="1" stopColor="#2F9E3F" />
         </linearGradient>
         <filter id={glow} x="-90%" y="-40%" width="280%" height="180%">
           <feGaussianBlur stdDeviation="1.9" result="blur" />

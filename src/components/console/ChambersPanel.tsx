@@ -61,7 +61,7 @@ function ChamberCard({
         clipPath:
           "polygon(0 0, calc(100% - 13px) 0, 100% 13px, 100% 100%, 13px 100%, 0 calc(100% - 13px))",
         boxShadow: active
-          ? "0 0 0 1px rgba(255,106,0,.18), 0 14px 34px rgba(255,106,0,.14)"
+          ? "0 0 0 1px rgba(95,207,74,.18), 0 14px 34px rgba(95,207,74,.14)"
           : "0 8px 22px rgba(0,0,0,.32)",
       }}
     >
@@ -70,7 +70,7 @@ function ChamberCard({
           className="absolute inset-x-0 top-0 h-px"
           style={{
             background:
-              "linear-gradient(90deg,transparent,#FFB020,#FF6A00,transparent)",
+              "linear-gradient(90deg,transparent,#FFC94A,#5FCF4A,transparent)",
           }}
           aria-hidden="true"
         />

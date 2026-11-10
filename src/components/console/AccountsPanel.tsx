@@ -48,8 +48,8 @@ export function AccountsPanel({ launcher }: { launcher: Launcher }) {
               key={account.id}
               className="flex items-center gap-3 border px-3 py-2.5 transition-colors"
               style={{
-                borderColor: active ? "rgba(255,106,0,.55)" : "#252A34",
-                background: active ? "rgba(255,106,0,.06)" : "rgba(255,255,255,.012)",
+                borderColor: active ? "rgba(95,207,74,.55)" : "#223229",
+                background: active ? "rgba(95,207,74,.06)" : "rgba(255,255,255,.012)",
               }}
             >
               <button
@@ -62,9 +62,9 @@ export function AccountsPanel({ launcher }: { launcher: Launcher }) {
                   className="grid size-8 flex-none place-items-center font-display text-[13px] font-bold"
                   style={{
                     background: active
-                      ? "linear-gradient(135deg,#FFB020,#FF6A00)"
+                      ? "linear-gradient(135deg,#FFC94A,#5FCF4A)"
                       : "#1b212b",
-                    color: active ? "#1a0a01" : "#C3CAD4",
+                    color: active ? "#07120a" : "#C3CAD4",
                     clipPath:
                       "polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px))",
                   }}
@@ -85,7 +85,7 @@ export function AccountsPanel({ launcher }: { launcher: Launcher }) {
                             ? "rgba(53,224,240,.4)"
                             : "rgba(152,161,174,.35)",
                         color:
-                          account.kind === "Microsoft" ? "#35E0F0" : "#98A1AE",
+                          account.kind === "Microsoft" ? "#45E3CF" : "#93A79A",
                       }}
                     >
                       {account.kind}
@@ -270,7 +270,7 @@ export function AccountsPanel({ launcher }: { launcher: Launcher }) {
 
       <div className="flex items-center justify-between gap-3 border-t border-line pt-3">
         <span className="flex items-center gap-2">
-          <span className="dot" style={{ color: "#79E0A5" }} />
+          <span className="dot" style={{ color: "#86E85A" }} />
           <span className="font-mono text-[10.5px] text-steel">
             Microsoft session refresh · silent, local only
           </span>

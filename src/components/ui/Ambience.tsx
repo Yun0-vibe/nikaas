@@ -25,7 +25,7 @@ export function Ambience() {
           className="animate-drift absolute -top-40 left-[8%] size-[620px] rounded-full opacity-45 blur-[130px]"
           style={{
             background:
-              "radial-gradient(circle, rgba(255,106,0,.20), transparent 66%)",
+              "radial-gradient(circle, rgba(95,207,74,.2), transparent 66%)",
           }}
         />
         <div

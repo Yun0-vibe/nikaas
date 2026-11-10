@@ -19,9 +19,9 @@ const CATEGORIES: Array<CatalogCategory | "All"> = [
 ];
 
 const CATEGORY_COLOR: Record<CatalogCategory, string> = {
-  Mod: "#79E0A5",
-  Shader: "#35E0F0",
-  "Resource pack": "#FFB020",
+  Mod: "#86E85A",
+  Shader: "#45E3CF",
+  "Resource pack": "#FFC94A",
 };
 
 export function CatalogPanel({ launcher }: { launcher: Launcher }) {
@@ -119,7 +119,7 @@ export function CatalogPanel({ launcher }: { launcher: Launcher }) {
           <span
             className="grid size-3.5 place-items-center border"
             style={{
-              borderColor: compatibleOnly ? "#79E0A5" : "#4C5563",
+              borderColor: compatibleOnly ? "#86E85A" : "#4C5563",
               background: compatibleOnly ? "rgba(121,224,165,.16)" : "transparent",
             }}
           >

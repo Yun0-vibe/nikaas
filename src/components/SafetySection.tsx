@@ -39,7 +39,7 @@ export function SafetySection() {
     <section id="safety" className="relative py-20 sm:py-28">
       <div className="container-forge">
         <SectionHead
-          eyebrow="06 · Safety"
+          eyebrow="07 · Safety"
           title="Nothing leaves the vent."
           lede="A Minecraft launcher needs your game files and a session token. It should not need your password, your admin rights, or a copy of your world. Here is exactly what Nikaas touches."
         />
@@ -53,7 +53,7 @@ export function SafetySection() {
                   Integrity report
                 </span>
                 <span className="flex items-center gap-1.5 font-mono text-[9px] tracking-[0.16em] text-acid uppercase">
-                  <span className="dot" style={{ color: "#79E0A5" }} />
+                  <span className="dot" style={{ color: "#86E85A" }} />
                   local only
                 </span>
               </div>
@@ -81,7 +81,7 @@ export function SafetySection() {
                       <span
                         className="grid size-4 place-items-center rounded-full"
                         style={{
-                          color: "#79E0A5",
+                          color: "#86E85A",
                           background: "rgba(121,224,165,.14)",
                         }}
                       >

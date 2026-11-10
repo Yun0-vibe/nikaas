@@ -50,7 +50,7 @@ export function CompareSection() {
     <section id="compare" className="relative py-20 sm:py-28">
       <div className="container-forge">
         <SectionHead
-          eyebrow="07 · Compare"
+          eyebrow="08 · Compare"
           title="What a Minecraft launcher should handle."
           lede="The stock Minecraft launcher starts the game. Nikaas also isolates worlds, manages loaders, runs the catalog and shows you what is happening. Here is the difference in plain terms."
         />
@@ -72,14 +72,15 @@ export function CompareSection() {
                       scope="col"
                       className="relative px-4 py-3.5 font-mono text-[9.5px] tracking-[0.18em] uppercase"
                       style={{
-                        color: index === 0 ? "#FFE7A3" : "#98A1AE",
-                        background:
-                          index === 0 ? "rgba(255,106,0,.09)" : undefined,
+                        color: index === 0 ? "#F3FFE8" : "#93A79A",
+                        ...(index === 0
+                          ? { background: "rgba(95,207,74,.09)" }
+                          : {}),
                       }}
                     >
                       {column}
                       {index === 0 ? (
-                        <span className="ml-2 inline-block bg-magma px-1.5 py-0.5 text-[8px] tracking-[0.1em] text-[#1a0a01]">
+                        <span className="ml-2 inline-block bg-magma px-1.5 py-0.5 text-[8px] tracking-[0.1em] text-[#07120a]">
                           this
                         </span>
                       ) : null}
@@ -108,7 +109,7 @@ export function CompareSection() {
                         className="px-4 py-3"
                         style={{
                           background:
-                            index === 0 ? "rgba(255,106,0,.04)" : undefined,
+                            index === 0 ? "rgba(95,207,74,.04)" : undefined,
                         }}
                       >
                         <Mark state={cell} />

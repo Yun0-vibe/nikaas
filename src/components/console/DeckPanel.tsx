@@ -22,10 +22,10 @@ export function DeckPanel({ launcher }: { launcher: Launcher }) {
   const recent = [...log].slice(-3).reverse();
 
   const stats = [
-    { label: "Chambers", value: String(chambers.length), color: "#FF6A00" },
-    { label: "Mods mounted", value: String(totalMods), color: "#79E0A5" },
-    { label: "On disk", value: `${totalSize.toFixed(1)} GB`, color: "#35E0F0" },
-    { label: "Account", value: activeAccount?.name ?? "—", color: "#FFB020" },
+    { label: "Chambers", value: String(chambers.length), color: "#5FCF4A" },
+    { label: "Mods mounted", value: String(totalMods), color: "#86E85A" },
+    { label: "On disk", value: `${totalSize.toFixed(1)} GB`, color: "#45E3CF" },
+    { label: "Account", value: activeAccount?.name ?? "—", color: "#FFC94A" },
   ];
 
   return (
@@ -33,14 +33,14 @@ export function DeckPanel({ launcher }: { launcher: Launcher }) {
       <div className="relative overflow-hidden border border-line bg-gradient-to-br from-panel to-forge p-3.5">
         <div
           className="pointer-events-none absolute -top-14 -right-14 size-40 rounded-full blur-3xl"
-          style={{ background: "rgba(255,106,0,.2)" }}
+          style={{ background: "rgba(95,207,74,.2)" }}
         />
         <div className="flex items-center justify-between">
           <span className="kicker">Live pressure</span>
           <span className="flex items-center gap-1.5 font-mono text-[9.5px] tracking-[0.14em] text-steel uppercase">
             <span
               className="dot"
-              style={{ color: phase === "idle" ? "#4C5563" : "#79E0A5" }}
+              style={{ color: phase === "idle" ? "#4C5563" : "#86E85A" }}
             />
             {phase === "idle" ? "idle" : phase === "running" ? "in game" : "releasing"}
           </span>
@@ -70,9 +70,9 @@ export function DeckPanel({ launcher }: { launcher: Launcher }) {
               />
               <defs>
                 <linearGradient id="pressureRing" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stopColor="#FFE7A3" />
-                  <stop offset="0.5" stopColor="#FF6A00" />
-                  <stop offset="1" stopColor="#FF3B1F" />
+                  <stop offset="0" stopColor="#F3FFE8" />
+                  <stop offset="0.5" stopColor="#5FCF4A" />
+                  <stop offset="1" stopColor="#FFC94A" />
                 </linearGradient>
               </defs>
             </svg>

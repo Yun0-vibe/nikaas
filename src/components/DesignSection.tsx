@@ -14,9 +14,9 @@ export function DesignSection() {
     <section id="design" className="relative py-20 sm:py-28">
       <div className="container-forge">
         <SectionHead
-          eyebrow="05 · Dark Forge / Molten Vent"
-          title="Obsidian. Magma. Steel."
-          lede="Nikaas stays dark so your world, your mods and your logs are the only things that glow. Matte surfaces, hard edges, one hot seam."
+          eyebrow="06 · Grass & Gold"
+          title="Moss. Grass. Sunlight."
+          lede="Nikaas stays dark so your world, your mods and your logs are the only things that glow. Pixel bevels, hard edges, one green seam."
         />
 
         <div className="mt-9 grid gap-4 lg:grid-cols-[0.85fr_1.15fr]">
@@ -24,17 +24,17 @@ export function DesignSection() {
             <div className="panel-forge scanlines relative flex h-full min-h-[330px] flex-col items-center justify-center overflow-hidden p-8 text-center">
               <div
                 className="animate-float absolute inset-0 m-auto size-56 rounded-full blur-3xl"
-                style={{ background: "rgba(255,106,0,.22)" }}
+                style={{ background: "rgba(95,207,74,.22)" }}
                 aria-hidden="true"
               />
               <div className="relative">
                 <ForgeMark
                   animated
                   title="Nikaas mark: a geometric block splitting open with light"
-                  className="size-28 drop-shadow-[0_0_28px_rgba(255,106,0,.55)] sm:size-32"
+                  className="size-28 drop-shadow-[0_0_28px_rgba(95,207,74,.55)] sm:size-32"
                 />
               </div>
-              <p className="relative mt-7 max-w-[240px] text-[13px] leading-relaxed text-[#b6bdc8]">
+              <p className="relative mt-7 max-w-[240px] text-[13px] leading-relaxed text-[#b4c4b8]">
                 A solid cube splits down the middle.
                 <br />
                 The light does the talking.
@@ -77,8 +77,8 @@ export function DesignSection() {
                         style={{
                           background: swatch.hex,
                           boxShadow:
-                            swatch.hex === "#FF6A00"
-                              ? "inset 0 0 14px rgba(255,255,255,.28), 0 0 14px rgba(255,106,0,.5)"
+                            swatch.hex === "#5FCF4A"
+                              ? "inset 0 0 14px rgba(255,255,255,.28), 0 0 14px rgba(95,207,74,.5)"
                               : `inset 0 0 12px rgba(255,255,255,.08)`,
                         }}
                         aria-hidden="true"
@@ -139,7 +139,7 @@ export function DesignSection() {
                 {[
                   { name: "Display", font: "font-display", sample: "Aa", meta: "Space Grotesk" },
                   { name: "Body", font: "font-body", sample: "Aa", meta: "Inter" },
-                  { name: "Mono", font: "font-mono", sample: "01", meta: "JetBrains Mono" },
+                  { name: "Pixel", font: "font-pixel", sample: "Aa", meta: "Silkscreen" },
                 ].map((type) => (
                   <div key={type.name} className="bg-forge p-3.5">
                     <span className="font-mono text-[9px] tracking-[0.18em] text-steel uppercase">

@@ -15,10 +15,10 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#06070A",
+          background: "#070C09",
           padding: 64,
           position: "relative",
-          color: "#EDE8DF",
+          color: "#EAF2E7",
           fontFamily: "sans-serif",
         }}
       >
@@ -31,7 +31,7 @@ export default function OpengraphImage() {
             height: 720,
             borderRadius: 720,
             background:
-              "radial-gradient(circle, rgba(255,106,0,0.34), rgba(255,59,31,0.10) 45%, rgba(6,7,10,0) 70%)",
+              "radial-gradient(circle, rgba(95,207,74,0.33), rgba(69,227,207,0.08) 45%, rgba(7,12,9,0) 70%)",
             display: "flex",
           }}
         />
@@ -44,9 +44,9 @@ export default function OpengraphImage() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              border: "1px solid #39424F",
-              background: "linear-gradient(135deg,#1C222B,#0A0C11)",
-              color: "#FFB020",
+              border: "1px solid #364C3F",
+              background: "linear-gradient(135deg,#17231B,#0B110D)",
+              color: "#FFC94A",
               fontSize: 26,
               fontWeight: 700,
             }}
@@ -61,7 +61,7 @@ export default function OpengraphImage() {
               style={{
                 fontSize: 11,
                 letterSpacing: 6,
-                color: "#98A1AE",
+                color: "#93A79A",
                 marginTop: 4,
               }}
             >
@@ -74,11 +74,11 @@ export default function OpengraphImage() {
               display: "flex",
               alignItems: "center",
               gap: 8,
-              border: "1px solid #39424F",
+              border: "1px solid #364C3F",
               padding: "8px 14px",
               fontSize: 14,
               letterSpacing: 3,
-              color: "#FFB020",
+              color: "#FFC94A",
             }}
           >
             <div
@@ -86,7 +86,7 @@ export default function OpengraphImage() {
                 width: 8,
                 height: 8,
                 borderRadius: 8,
-                background: "#FF6A00",
+                background: "#5FCF4A",
                 display: "flex",
               }}
             />
@@ -106,13 +106,13 @@ export default function OpengraphImage() {
             }}
           >
             <span>Minecraft launcher.</span>
-            <span style={{ color: "#7CC355" }}>Clean pressure.</span>
+            <span style={{ color: "#6FD64E" }}>Clean pressure.</span>
           </div>
           <div
             style={{
               width: 220,
               height: 3,
-              background: "#FF6A00",
+              background: "linear-gradient(90deg,#5FCF4A,#FFC94A)",
               marginTop: 28,
               display: "flex",
             }}
@@ -121,7 +121,7 @@ export default function OpengraphImage() {
             style={{
               marginTop: 24,
               fontSize: 22,
-              color: "#9AA3B0",
+              color: "#A9BCAD",
               display: "flex",
               maxWidth: 820,
             }}
@@ -136,14 +136,14 @@ export default function OpengraphImage() {
             gap: 36,
             fontSize: 16,
             letterSpacing: 3,
-            color: "#98A1AE",
+            color: "#93A79A",
           }}
         >
-          <span style={{ color: "#7CC355" }}>JAVA EDITION</span>
+          <span style={{ color: "#86E85A" }}>JAVA EDITION</span>
           <span>FABRIC</span>
           <span>FORGE</span>
           <span>NEOFORGE</span>
-          <span style={{ color: "#FFB020" }}>MODRINTH CATALOG</span>
+          <span style={{ color: "#FFC94A" }}>MODRINTH CATALOG</span>
         </div>
       </div>
     ),

@@ -59,14 +59,14 @@ export function DownloadSection() {
           <div className="panel-forge seam-top relative overflow-hidden">
             <div
               className="pointer-events-none absolute -top-24 right-0 size-[420px] rounded-full blur-3xl"
-              style={{ background: "rgba(255,106,0,.16)" }}
+              style={{ background: "rgba(95,207,74,.16)" }}
               aria-hidden="true"
             />
             <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10">
               <div>
                 <p className="eyebrow">
                   <span className="pulse-dot" />
-                  08 · Release status
+                  09 · Release status
                 </p>
                 <h2 className="mt-3 text-[clamp(28px,4.6vw,46px)] text-bone">
                   One Minecraft launcher.
@@ -101,11 +101,11 @@ export function DownloadSection() {
                       style={{
                         borderColor:
                           platform.state === "soon"
-                            ? "rgba(255,106,0,.45)"
+                            ? "rgba(95,207,74,.45)"
                             : "#252A34",
                         background:
                           platform.state === "soon"
-                            ? "rgba(255,106,0,.07)"
+                            ? "rgba(95,207,74,.07)"
                             : "rgba(255,255,255,.01)",
                       }}
                     >
@@ -169,12 +169,12 @@ export function DownloadSection() {
                         </span>
                         <span
                           className="flex items-center gap-1.5 font-mono text-[9.5px] tracking-[0.1em] uppercase"
-                          style={{ color: system.compatible ? "#79E0A5" : "#FFB020" }}
+                          style={{ color: system.compatible ? "#86E85A" : "#FFC94A" }}
                         >
                           <span
                             className="dot"
                             style={{
-                              color: system.compatible ? "#79E0A5" : "#FFB020",
+                              color: system.compatible ? "#86E85A" : "#FFC94A",
                             }}
                           />
                           {system.compatible ? "compatible" : "windows-only build"}

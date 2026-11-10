@@ -68,7 +68,7 @@ export function ChambersSection() {
       <div className="container-forge grid items-center gap-10 lg:grid-cols-2">
         <div>
           <SectionHead
-            eyebrow="04 · Chambers"
+            eyebrow="05 · Chambers"
             title="Three Minecraft worlds. Zero cross-talk."
             lede="A chamber is a Minecraft world with its own mods, saves and settings. Keep a heavy 412-mod tech pack next to a clean vanilla world and never untangle a folder again."
           />
@@ -98,7 +98,7 @@ export function ChambersSection() {
           <div className="relative">
             <div
               className="pointer-events-none absolute inset-x-6 top-6 bottom-6 rounded-full blur-3xl"
-              style={{ background: "rgba(255,106,0,.12)" }}
+              style={{ background: "rgba(95,207,74,.12)" }}
               aria-hidden="true"
             />
             <div className="relative border border-line bg-[#080a0f]/90 p-4 sm:p-5">

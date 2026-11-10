@@ -103,7 +103,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#06070A",
+  themeColor: "#070C09",
   colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
@@ -120,7 +120,7 @@ export default function RootLayout({
       <body className="relative min-h-screen antialiased">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:bg-magma focus:px-4 focus:py-2 focus:font-mono focus:text-[11px] focus:tracking-[0.14em] focus:text-[#1a0a01] focus:uppercase"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:bg-magma focus:px-4 focus:py-2 focus:font-mono focus:text-[11px] focus:tracking-[0.14em] focus:text-[#07120a] focus:uppercase"
         >
           Skip to content
         </a>

@@ -80,7 +80,7 @@ function VoxelStage() {
         className="absolute inset-[13%] rounded-full opacity-70 blur-[64px]"
         style={{
           background:
-            "radial-gradient(circle, rgba(255,106,0,.32), rgba(255,59,31,.12) 46%, transparent 70%)",
+            "radial-gradient(circle, rgba(95,207,74,.32), rgba(69,227,207,.12) 46%, transparent 70%)",
         }}
       />
 
@@ -147,7 +147,7 @@ function VoxelStage() {
               className="absolute -inset-8 rounded-full blur-3xl"
               style={{
                 background:
-                  "radial-gradient(circle, rgba(255,140,30,.4), transparent 68%)",
+                  "radial-gradient(circle, rgba(139,232,106,.4), transparent 68%)",
                 opacity: 0.5 + pressure / 210,
               }}
             />
@@ -168,18 +168,18 @@ function VoxelStage() {
       >
         <Telemetry
           className="top-[5%] left-0"
-          dot="#FF6A00"
+          dot="#6FD64E"
           pulse
           label={`PRESSURE ${pressure}%`}
         />
         <Telemetry
           className="top-[43%] right-0"
-          dot="#35E0F0"
+          dot="#45E3CF"
           label="NEOFORGE 21.1"
         />
         <Telemetry
           className="bottom-[21%] left-[1%]"
-          dot={ready ? "#79E0A5" : "#FFB020"}
+          dot={ready ? "#86E85A" : "#FFC94A"}
           label={ready ? "1.21.8 READY" : "PATCHING"}
         />
       </motion.div>
@@ -189,11 +189,11 @@ function VoxelStage() {
       </div>
 
       {[
-        { top: "25%", left: "44%", size: 5, color: "#FFB020", delay: "0s" },
+        { top: "25%", left: "44%", size: 5, color: "#FFC94A", delay: "0s" },
         { top: "12%", left: "58%", size: 4, color: "#7CC355", delay: "-1.2s" },
-        { top: "62%", left: "40%", size: 4, color: "#4AEDD9", delay: "-2.4s" },
-        { top: "33%", left: "18%", size: 3, color: "#FF6A00", delay: "-3.1s" },
-        { top: "68%", left: "76%", size: 5, color: "#FFB020", delay: "-4.4s" },
+        { top: "62%", left: "40%", size: 4, color: "#45E3CF", delay: "-2.4s" },
+        { top: "33%", left: "18%", size: 3, color: "#6FD64E", delay: "-3.1s" },
+        { top: "68%", left: "76%", size: 5, color: "#FFC94A", delay: "-4.4s" },
       ].map((spark) => (
         <span
           key={`${spark.top}-${spark.left}`}
@@ -227,7 +227,7 @@ function Telemetry({
 }) {
   return (
     <div
-      className={`absolute flex items-center gap-2 border border-line bg-[#080b10]/92 px-3 py-2 font-mono text-[9.5px] tracking-[0.16em] text-bone backdrop-blur-sm ${className}`}
+      className={`absolute flex items-center gap-2 border border-line bg-[#0a120d]/92 px-3 py-2 font-mono text-[9.5px] tracking-[0.16em] text-bone backdrop-blur-sm ${className}`}
       style={{
         clipPath:
           "polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px))",
@@ -264,7 +264,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-x-0 top-0 h-px"
         style={{
           background:
-            "linear-gradient(90deg,transparent,rgba(255,106,0,.5),transparent)",
+            "linear-gradient(90deg,transparent,rgba(95,207,74,.5),transparent)",
         }}
         aria-hidden="true"
       />
@@ -295,7 +295,7 @@ export function Hero() {
                     index === 1
                       ? "block text-grass [text-shadow:0_0_44px_rgba(124,195,85,.34)]"
                       : index === 2
-                        ? "block text-magma [text-shadow:0_0_44px_rgba(255,106,0,.45)]"
+                        ? "block text-volt [text-shadow:0_0_44px_rgba(255,201,74,.4)]"
                         : "block text-bone"
                   }
                   initial={reduced ? false : { y: "108%", opacity: 0 }}
@@ -385,7 +385,7 @@ export function Hero() {
               >
                 <span
                   className="dot"
-                  style={{ color: platform.active ? "#7CC355" : "#4C5563" }}
+                  style={{ color: platform.active ? "#6FD64E" : "#4C5563" }}
                 />
                 {platform.label}
               </span>

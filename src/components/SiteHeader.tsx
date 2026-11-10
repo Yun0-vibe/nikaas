@@ -8,12 +8,15 @@ import {
   useReducedMotion,
   useScroll,
 } from "motion/react";
+import { usePathname } from "next/navigation";
 import { NAV_SECTIONS } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { ForgeMark } from "@/components/ui/ForgeMark";
 import { Magnetic } from "@/components/ui/Magnetic";
 
 export function SiteHeader() {
+  const pathname = usePathname();
+  const onNews = pathname?.startsWith("/news") ?? false;
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState<string>("overview");
   const [open, setOpen] = useState(false);
@@ -78,7 +81,7 @@ export function SiteHeader() {
     >
       <div className="container-forge flex h-full items-center justify-between gap-4">
         <a
-          href="#top"
+          href={onNews ? "/" : "#top"}
           className="group flex items-center gap-2.5"
           aria-label="Nikaas Launcher — Minecraft Java Edition launcher home"
           onClick={() => setOpen(false)}
@@ -90,7 +93,7 @@ export function SiteHeader() {
             />
             <span
               className="absolute inset-0 -z-10 rounded-full opacity-0 blur-lg transition-opacity duration-500 group-hover:opacity-100"
-              style={{ background: "rgba(255,106,0,.5)" }}
+              style={{ background: "rgba(95,207,74,.55)" }}
               aria-hidden="true"
             />
           </span>
@@ -111,23 +114,25 @@ export function SiteHeader() {
           {NAV_SECTIONS.map((item) => (
             <a
               key={item.id}
-              href={`#${item.id}`}
-              aria-current={active === item.id ? "true" : undefined}
+              href={onNews ? `/#${item.id}` : `#${item.id}`}
+              aria-current={
+                active === item.id && !onNews ? "true" : undefined
+              }
               className={cn(
                 "relative px-3.5 py-2 font-mono text-[11px] tracking-[0.13em] uppercase transition-colors duration-200",
-                active === item.id
+                active === item.id && !onNews
                   ? "text-whitehot"
                   : "text-steel hover:text-bone",
               )}
             >
-              {active === item.id ? (
+              {active === item.id && !onNews ? (
                 <motion.span
                   layoutId="nav-active"
                   className="absolute inset-x-2 -bottom-px h-px"
                   style={{
                     background:
-                      "linear-gradient(90deg,transparent,#FF6A00,#FFB020,transparent)",
-                    boxShadow: "0 0 12px rgba(255,106,0,.9)",
+                      "linear-gradient(90deg,transparent,#5FCF4A,#FFC94A,transparent)",
+                    boxShadow: "0 0 12px rgba(95,207,74,.9)",
                   }}
                   transition={
                     reduced
@@ -139,11 +144,37 @@ export function SiteHeader() {
               {item.label}
             </a>
           ))}
+          <a
+            href="/news"
+            aria-current={onNews ? "page" : undefined}
+            className={cn(
+              "relative px-3.5 py-2 font-mono text-[11px] tracking-[0.13em] uppercase transition-colors duration-200",
+              onNews ? "text-whitehot" : "text-steel hover:text-bone",
+            )}
+          >
+            {onNews ? (
+              <motion.span
+                layoutId="nav-active"
+                className="absolute inset-x-2 -bottom-px h-px"
+                style={{
+                  background:
+                    "linear-gradient(90deg,transparent,#5FCF4A,#FFC94A,transparent)",
+                  boxShadow: "0 0 12px rgba(95,207,74,.9)",
+                }}
+                transition={
+                  reduced
+                    ? { duration: 0 }
+                    : { type: "spring", stiffness: 380, damping: 32 }
+                }
+              />
+            ) : null}
+            News
+          </a>
         </nav>
 
         <div className="flex items-center gap-2.5">
           <Magnetic strength={0.22} className="hidden sm:inline-block">
-            <a href="#download" className="btn btn-primary btn-sm">
+            <a href={onNews ? "/#download" : "#download"} className="btn btn-primary btn-sm">
               Download
               <span className="btn-arrow" aria-hidden="true">
                 →
@@ -196,7 +227,7 @@ export function SiteHeader() {
               {NAV_SECTIONS.map((item, index) => (
                 <motion.a
                   key={item.id}
-                  href={`#${item.id}`}
+                  href={onNews ? `/#${item.id}` : `#${item.id}`}
                   initial={{ opacity: 0, x: -14 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.05 + index * 0.045 }}
@@ -213,7 +244,23 @@ export function SiteHeader() {
                 </motion.a>
               ))}
               <motion.a
-                href="#download"
+                href="/news"
+                initial={{ opacity: 0, x: -14 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.05 + NAV_SECTIONS.length * 0.045 }}
+                onClick={() => setOpen(false)}
+                className={cn(
+                  "flex items-center justify-between border-b border-line/70 py-3.5 font-display text-[17px] font-medium",
+                  onNews ? "text-grass" : "text-bone",
+                )}
+              >
+                News
+                <span className="font-mono text-[10px] tracking-[0.2em] text-steel">
+                  LOG
+                </span>
+              </motion.a>
+              <motion.a
+                href={onNews ? "/#download" : "#download"}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}

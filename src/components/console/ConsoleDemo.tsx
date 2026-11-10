@@ -77,7 +77,7 @@ function ConsoleWindow({ launcher }: { launcher: Launcher }) {
                   phase === "idle"
                     ? "#4C5563"
                     : phase === "running"
-                      ? "#79E0A5"
+                      ? "#86E85A"
                       : "#FFB020",
               }}
             />
@@ -139,8 +139,8 @@ function ConsoleWindow({ launcher }: { launcher: Launcher }) {
               <span
                 className="grid size-7 flex-none place-items-center font-display text-[12px] font-bold"
                 style={{
-                  background: "linear-gradient(135deg,#FFB020,#FF6A00)",
-                  color: "#1a0a01",
+                  background: "linear-gradient(135deg,#FFC94A,#5FCF4A)",
+                  color: "#07120a",
                   clipPath:
                     "polygon(0 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 7px 100%, 0 calc(100% - 7px))",
                 }}
@@ -264,8 +264,8 @@ function ConsoleWindow({ launcher }: { launcher: Launcher }) {
                   transition={{ duration: 0.25 }}
                   style={{
                     background:
-                      "linear-gradient(90deg,#FF3B1F,#FF6A00 45%,#FFB020)",
-                    boxShadow: "0 0 12px rgba(255,106,0,.75)",
+                      "linear-gradient(90deg,#45E3CF,#5FCF4A 45%,#FFC94A)",
+                    boxShadow: "0 0 12px rgba(95,207,74,.75)",
                   }}
                 />
               </div>
@@ -305,7 +305,7 @@ export function ConsoleDemo() {
       <div className="container-forge">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHead
-            eyebrow="01 · The console"
+            eyebrow="02 · The console"
             title="A vent, not a clutter drawer."
             lede="Every surface has a job in a modded Minecraft setup. Chambers hold the worlds. The Exhaust holds the truth. Release is the only button that matters."
           />

@@ -18,12 +18,12 @@ type Ember = {
 };
 
 const COLORS = [
-  "#FF6A00",
-  "#FFB020",
-  "#FFE7A3",
-  "#FF3B1F",
-  "#FF8A1E",
-  "#35E0F0",
+  "#5FCF4A",
+  "#8BE86A",
+  "#FFC94A",
+  "#A6F28A",
+  "#45E3CF",
+  "#6FD64E",
 ];
 
 function makeSprite(color: string): HTMLCanvasElement {

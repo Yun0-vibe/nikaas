@@ -1,24 +1,9 @@
 export const NAV_SECTIONS = [
+  { id: "tour", label: "Screens" },
   { id: "anatomy", label: "Console" },
-  { id: "features", label: "Features" },
-  { id: "catalog", label: "Catalog" },
-  { id: "compare", label: "Compare" },
+  { id: "store", label: "Store" },
   { id: "faq", label: "FAQ" },
 ] as const;
-
-export const MARQUEE_ITEMS = [
-  "Minecraft: Java Edition",
-  "Vanilla",
-  "Fabric",
-  "Forge",
-  "NeoForge",
-  "Modrinth catalog",
-  "Microsoft sign-in",
-  "Offline profiles",
-  "Isolated worlds",
-] as const;
-
-export const MC_ITEM = "Minecraft: Java Edition";
 
 export type FeatureIcon =
   | "chamber"
@@ -44,7 +29,7 @@ export const FEATURES: Feature[] = [
     body: "Every modpack lives in its own chamber. Mods, worlds, configs, screenshots and resource packs stay separate — no more dragging folders around before a server night.",
     tag: "One folder per world · No mix-ups",
     icon: "chamber",
-    accent: "#FF6A00",
+    accent: "#5FCF4A",
   },
   {
     num: "02",
@@ -52,7 +37,7 @@ export const FEATURES: Feature[] = [
     body: "Nikaas installs the correct game version and loader, sets memory, joins your server and launches. Pick Vanilla, Fabric, Forge or NeoForge and press one button.",
     tag: "Vanilla · Fabric · Forge · NeoForge",
     icon: "release",
-    accent: "#FFB020",
+    accent: "#FFC94A",
   },
   {
     num: "03",
@@ -60,7 +45,7 @@ export const FEATURES: Feature[] = [
     body: "Downloads, files and launch errors stream into one live feed. If something goes wrong, you can see exactly where — without digging through folders or guesswork.",
     tag: "Live progress · Readable errors",
     icon: "exhaust",
-    accent: "#35E0F0",
+    accent: "#45E3CF",
   },
   {
     num: "04",
@@ -68,7 +53,7 @@ export const FEATURES: Feature[] = [
     body: "Find mods, shaders and resource packs without leaving the launcher. Filter by your game version and loader, and required dependencies come along for the ride.",
     tag: "Mods · Shaders · Resource packs",
     icon: "catalog",
-    accent: "#79E0A5",
+    accent: "#86E85A",
   },
   {
     num: "05",
@@ -76,7 +61,7 @@ export const FEATURES: Feature[] = [
     body: "Sign in with Microsoft for online servers, or use an offline profile for local worlds. Multiple accounts stay saved and ready to switch.",
     tag: "Microsoft · Offline · Multi-account",
     icon: "shield",
-    accent: "#FF3B1F",
+    accent: "#FF5C3D",
   },
   {
     num: "06",
@@ -84,19 +69,19 @@ export const FEATURES: Feature[] = [
     body: "Game files live in their own Nikaas folder on a drive with room to spare. Your existing .minecraft folder is never moved, edited or overwritten.",
     tag: "Separate storage · Shared downloads",
     icon: "storage",
-    accent: "#FFE7A3",
+    accent: "#F3FFE8",
   },
 ];
 
 export const PALETTE = [
-  { hex: "#06070A", name: "Matte obsidian", role: "Background field" },
-  { hex: "#10141B", name: "Forge black", role: "Raised surface" },
-  { hex: "#FF6A00", name: "Magma orange", role: "Primary action" },
-  { hex: "#FFB020", name: "Volt amber", role: "Live / warning" },
-  { hex: "#FF3B1F", name: "Ember red", role: "Danger / stop" },
-  { hex: "#35E0F0", name: "Coolant cyan", role: "Information" },
-  { hex: "#79E0A5", name: "Acid green", role: "Verified / success" },
-  { hex: "#98A1AE", name: "Steel gray", role: "Cool neutral" },
+  { hex: "#070C09", name: "Moss obsidian", role: "Background field" },
+  { hex: "#101813", name: "Deep moss", role: "Raised surface" },
+  { hex: "#5FCF4A", name: "Grass green", role: "Primary action" },
+  { hex: "#FFC94A", name: "Sun gold", role: "Live / warning" },
+  { hex: "#FF5C3D", name: "Lava red", role: "Danger / stop" },
+  { hex: "#45E3CF", name: "Diamond cyan", role: "Information" },
+  { hex: "#86E85A", name: "Acid green", role: "Verified / success" },
+  { hex: "#93A79A", name: "Stone gray", role: "Cool neutral" },
 ] as const;
 
 export const LANGUAGE_ROWS = [
@@ -174,10 +159,10 @@ export const LOADERS = ["Vanilla", "Fabric", "Forge", "NeoForge"] as const;
 export type Loader = (typeof LOADERS)[number];
 
 export const LOADER_COLORS: Record<Loader, string> = {
-  Vanilla: "#79E0A5",
-  Fabric: "#35E0F0",
-  Forge: "#FF3B1F",
-  NeoForge: "#FF6A00",
+  Vanilla: "#86E85A",
+  Fabric: "#45E3CF",
+  Forge: "#FF5C3D",
+  NeoForge: "#FFA03C",
 };
 
 export const VERSIONS = [
@@ -473,4 +458,261 @@ export const SERVERS = [
   "play.cubecraft.net",
   "us.mineplex.com",
   "mc.blockdrop.org",
+] as const;
+
+export type StoreCategory =
+  | "Modpack"
+  | "World"
+  | "Shader pack"
+  | "Resource pack"
+  | "Cosmetic";
+
+export type StoreItem = {
+  id: string;
+  name: string;
+  creator: string;
+  category: StoreCategory;
+  price: number;
+  rating: number;
+  reviews: number;
+  downloads: number;
+  summary: string;
+  description: string;
+  highlights: string[];
+  versions: string[];
+  loader: Loader | "Any";
+  sizeMb: number;
+  tag?: "Featured" | "New" | "Staff pick";
+  art: { from: string; to: string; accent: string };
+};
+
+export const STORE_ITEMS: StoreItem[] = [
+  {
+    id: "ashen-reach",
+    name: "Ashen Reach",
+    creator: "Nikaas Studio",
+    category: "Modpack",
+    price: 0,
+    rating: 4.9,
+    reviews: 1840,
+    downloads: 41_600,
+    summary:
+      "A ruined overworld, rebuilt by hand. Create engineering, dungeon runs and a slow-burn story in one chamber.",
+    description:
+      "Ashen Reach drops you into an overworld that already ended once. Rebuild the rail network, relight the ashen capital and dig into three hand-built dungeon wings. The pack ships with a tuned Create progression, quest book, custom ambience and a shader preset that keeps the ash palette readable at night.",
+    highlights: [
+      "412 curated mods, no overlapping recipes",
+      "Hand-built quest book with 60+ chapters",
+      "Custom Create progression from copper to trains",
+      "Includes Lumen shader preset, tuned for ash nights",
+    ],
+    versions: ["1.21.1"],
+    loader: "NeoForge",
+    sizeMb: 1240,
+    tag: "Featured",
+    art: { from: "#2B3128", to: "#0C0F0C", accent: "#FFB74A" },
+  },
+  {
+    id: "verdant-depths",
+    name: "Verdant Depths",
+    creator: "Mossbank",
+    category: "Modpack",
+    price: 4.99,
+    rating: 4.8,
+    reviews: 921,
+    downloads: 18_300,
+    summary:
+      "A lush-cave expedition pack with glowing flora, deep pressure and a base that grows with you.",
+    description:
+      "Verdant Depths turns the underground into the main event. Bioluminescent caves, slow-growing tree roots and a pressure system that rewards building down instead of out. Performance is tuned for mid-range laptops, with Sodium, Lithium and a trimmed shader list.",
+    highlights: [
+      "218 mods with a lightweight client footprint",
+      "Rebuilt cave biomes and glowing flora",
+      "Progressive base building with pressure rewards",
+      "Runs well on 6 GB of allocated RAM",
+    ],
+    versions: ["1.20.1"],
+    loader: "Forge",
+    sizeMb: 860,
+    art: { from: "#123B2A", to: "#06120C", accent: "#6FD64E" },
+  },
+  {
+    id: "cinderfall",
+    name: "Cinderfall",
+    creator: "Hollowworks",
+    category: "World",
+    price: 2.99,
+    rating: 4.7,
+    reviews: 604,
+    downloads: 12_800,
+    summary:
+      "A four-hour adventure map across a burning valley, with custom bosses and a hidden fifth ending.",
+    description:
+      "Cinderfall is a hand-built adventure map for one to three players. Cross the burning valley, restore four beacons and decide what happens to the survivors. No mods required — the pack installs the map, a resource pack and a compatible version into its own chamber.",
+    highlights: [
+      "4–5 hours of hand-built story",
+      "Custom bosses using vanilla mechanics",
+      "Hidden fifth ending for completionists",
+      "No mods required — vanilla compatible",
+    ],
+    versions: ["1.21.4"],
+    loader: "Vanilla",
+    sizeMb: 320,
+    art: { from: "#4A1D14", to: "#120604", accent: "#FF5C3D" },
+  },
+  {
+    id: "lumen-shaders",
+    name: "Lumen Shaders",
+    creator: "Duskline",
+    category: "Shader pack",
+    price: 3.49,
+    rating: 4.9,
+    reviews: 2640,
+    downloads: 33_400,
+    summary:
+      "Soft volumetric light, readable nights and a custom ash preset tuned for modded worlds.",
+    description:
+      "Lumen is a shader pack built to stay readable while you play. Nights keep their shadow detail, cave light doesn't blow out, and the included presets cover survival, screenshots and low-end hardware. Works with Iris on Fabric and NeoForge.",
+    highlights: [
+      "Three presets: Survival, Cinematic, Low-end",
+      "Readable cave and night lighting",
+      "Colored shadows and volumetric clouds",
+      "Iris-ready, no extra mod needed",
+    ],
+    versions: ["1.21.8", "1.21.4", "1.21.1", "1.20.1"],
+    loader: "Any",
+    sizeMb: 12,
+    tag: "Staff pick",
+    art: { from: "#1B2A4A", to: "#080B14", accent: "#45E3CF" },
+  },
+  {
+    id: "dawnlight-ui",
+    name: "Dawnlight UI",
+    creator: "Pixelcrush",
+    category: "Resource pack",
+    price: 0,
+    rating: 4.6,
+    reviews: 1380,
+    downloads: 26_900,
+    summary:
+      "A clean 16× interface pack: readable containers, pocket-friendly hotbars and quiet tooltips.",
+    description:
+      "Dawnlight UI reworks the interface without touching blocks or mobs. Containers get clearer slots, tooltips lose the clutter, and hotbar items stay legible against bright terrain. Safe to stack with most world resource packs.",
+    highlights: [
+      "16× interface-only textures",
+      "Clearer containers and tooltips",
+      "Works alongside world texture packs",
+      "Light and dark variants included",
+    ],
+    versions: ["1.21.8", "1.21.4", "1.21.1", "1.20.1"],
+    loader: "Any",
+    sizeMb: 8,
+    art: { from: "#3A2C14", to: "#100C05", accent: "#FFC94A" },
+  },
+  {
+    id: "capy-crate",
+    name: "Capy Crate",
+    creator: "Softpond",
+    category: "Cosmetic",
+    price: 1.99,
+    rating: 4.4,
+    reviews: 486,
+    downloads: 7_400,
+    summary:
+      "Capes, hats and backpacks for your character — cosmetic only, visible on Nikaas servers.",
+    description:
+      "A small crate of character cosmetics: four capes, three hats, two backpacks and a capybara shoulder pet. Nothing affects gameplay, and every item can be toggled per chamber so screenshots stay clean.",
+    highlights: [
+      "9 cosmetic items, no gameplay effect",
+      "Toggle per chamber",
+      "Visible in multiplayer on Nikaas",
+      "Works with both account types",
+    ],
+    versions: ["1.21.8", "1.21.4", "1.21.1", "1.20.1"],
+    loader: "Any",
+    sizeMb: 4,
+    art: { from: "#4A3A22", to: "#14100A", accent: "#D8A86A" },
+  },
+  {
+    id: "glacierbound",
+    name: "Glacierbound",
+    creator: "Northline",
+    category: "Modpack",
+    price: 5.99,
+    rating: 4.8,
+    reviews: 742,
+    downloads: 14_100,
+    summary:
+      "A cold-weather survival pack: heat management, ice ships and a world that never fully thaws.",
+    description:
+      "Glacierbound is a survival pack built around temperature, travel and small settlements. Insulate a base, build an ice ship and follow the thaw line north. Fabric-based, with a hand-picked mod list and a low-memory server preset included.",
+    highlights: [
+      "164 Fabric mods, tested together",
+      "Heat and insulation survival systems",
+      "Buildable ice ships and sleds",
+      "Server preset included",
+    ],
+    versions: ["1.21.8"],
+    loader: "Fabric",
+    sizeMb: 980,
+    tag: "New",
+    art: { from: "#1C3350", to: "#071019", accent: "#A9E8FF" },
+  },
+  {
+    id: "basalt-beats",
+    name: "Basalt Beats",
+    creator: "Lowfire",
+    category: "Cosmetic",
+    price: 1.49,
+    rating: 4.5,
+    reviews: 312,
+    downloads: 4_800,
+    summary:
+      "A 24-track ambient soundtrack for caves, night builds and long mining sessions.",
+    description:
+      "Basalt Beats replaces the ambient music pool with 24 original tracks recorded for slow play. The pack ships with separate cave, night and menu playlists, and a volume control that lives in the launcher's audio settings.",
+    highlights: [
+      "24 original ambient tracks",
+      "Separate cave, night and menu playlists",
+      "Volume controlled from the launcher",
+      "No mods required",
+    ],
+    versions: ["1.21.8", "1.21.4", "1.21.1", "1.20.1"],
+    loader: "Any",
+    sizeMb: 96,
+    art: { from: "#2B1B3E", to: "#0B0712", accent: "#C48BFF" },
+  },
+  {
+    id: "hollow-crown",
+    name: "The Hollow Crown",
+    creator: "Hollowworks",
+    category: "World",
+    price: 0,
+    rating: 4.7,
+    reviews: 968,
+    downloads: 21_500,
+    summary:
+      "A free, one-hour puzzle world inside a sunken castle. Find the crown, lose the throne.",
+    description:
+      "A compact puzzle world set in a half-sunken castle. Nine rooms, one crown and no combat — built for a quiet evening. Free to keep, and it installs into its own chamber with the matching version.",
+    highlights: [
+      "9 hand-built puzzle rooms",
+      "No combat, single-player friendly",
+      "Free with any Nikaas account",
+      "Installs into its own chamber",
+    ],
+    versions: ["1.21.1"],
+    loader: "Vanilla",
+    sizeMb: 140,
+    art: { from: "#2A2A3E", to: "#0A0A12", accent: "#FFC94A" },
+  },
+];
+
+export const STORE_CATEGORIES = [
+  "All",
+  "Modpack",
+  "World",
+  "Shader pack",
+  "Resource pack",
+  "Cosmetic",
 ] as const;
